@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;500;700&family=Lexend+Deca:wght@300;400&display=swap');
+
+
+$sedans: hsl(31, 77%, 52%);
+$suvs: hsl(184, 100%, 22%);
+$luxury: hsl(179, 100%, 13%);
+$backheadbut:hsl(0, 0%, 95%);
+$parawhite:hsla(0, 0%, 100%, 0.75);
+$padding: 1rem;
+
+
+
+body{
+    background: url(../images/milad-fakurian-7wUorDiCMSU-unsplash.jpg) center/cover;
+    color: $parawhite;
+}
+
+@mixin display-set ($display, $way, $horizontal, $vertical){
+    display: $display;
+    flex-direction: $way;
+    justify-content: $horizontal;
+    align-items: $vertical;
+}
+
+main{
+    background-color: $backheadbut;
+    width: 70%;
+    height: auto;
+    padding: 5rem;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px 0px rgba(114, 113, 113, 0.3);
+    margin: 5rem auto;
+
+    @include display-set (flex, row, center, center);
+
+    section h2{
+        font-family: 'Big Shoulders Display', cursive;
+        padding: $padding;
+    }
+
+    section p{
+        font-family: 'Lexend Deca', sans-serif;
+        padding: $padding;
+    }
+
+    button{
+        margin-left: 1rem;
+        padding: 1rem;
+        background-color: $backheadbut;
+        border-radius: 50px;
+        width: 65%;
+    }
+
+    button:hover{
+        background-color: transparent;
+        border-color: $backheadbut;
+        color: white;
+    }
+    
+}
+
+%sectionsStyle{
+
+    width: 60%;
+    height: auto;
+    padding:5rem;  
+
+}
+
+main section:first-child{
+    @extend %sectionsStyle;
+    background-color: $sedans;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
+
+main section:nth-child(2){
+    @extend %sectionsStyle;
+    background-color: $suvs;
+}
+
+main section:last-child{
+    @extend %sectionsStyle;
+    background-color: $luxury;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+
+@media (max-width: 1040px){
+
+    main{
+        @include display-set( flex, column ,center,center)
+    }
+
+    main section:first-child{
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 10px;
+    }
+
+    main section:last-child{
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    
+}

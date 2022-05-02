@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;500;700&family=Lexend+Deca:wght@300;400&display=swap");
+body {
+  background: url(../images/milad-fakurian-7wUorDiCMSU-unsplash.jpg) center/cover;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+main {
+  background-color: #f2f2f2;
+  width: 70%;
+  height: auto;
+  padding: 5rem;
+  border-radius: 10px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(114, 113, 113, 0.3);
+          box-shadow: 10px 10px 5px 0px rgba(114, 113, 113, 0.3);
+  margin: 5rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main section h2 {
+  font-family: 'Big Shoulders Display', cursive;
+  padding: 1rem;
+}
+
+main section p {
+  font-family: 'Lexend Deca', sans-serif;
+  padding: 1rem;
+}
+
+main button {
+  margin-left: 1rem;
+  padding: 1rem;
+  background-color: #f2f2f2;
+  border-radius: 50px;
+  width: 65%;
+}
+
+main button:hover {
+  background-color: transparent;
+  border-color: #f2f2f2;
+  color: white;
+}
+
+main section:first-child, main section:nth-child(2), main section:last-child {
+  width: 60%;
+  height: auto;
+  padding: 5rem;
+}
+
+main section:first-child {
+  background-color: #e38826;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+main section:nth-child(2) {
+  background-color: #006970;
+}
+
+main section:last-child {
+  background-color: #004241;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+@media (max-width: 1040px) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main section:first-child {
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 10px;
+  }
+  main section:last-child {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
